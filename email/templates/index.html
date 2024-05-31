@@ -1,0 +1,23 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MrPrinceGoswami</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class=" w-full h-screen flex justify-center items-center bg-gray-900">
+      <div class='w-[450px] h-[300px] '>
+        <form action="/email/" method='post' enctype="multipart/form-data" class='w-full h-full gap-12 flex flex-col justify-center items-center bg-white text-black rounded-xl shadow-2xl'>
+          {% csrf_token %}
+          Email will be send to ech@themedius.ai and CC HR@themedius.ai
+            <input type="email" name="email" id="email" placeholder='email' class='w-[350px] h-[35px] p-4 border-2 border-black'  required/>
+            <input type="file" name="img" id="file" required/>
+            <button type="submit" class='w-[350px] h-[35px] bg-blue-600 rounded-md text-white hover:bg-blue-800 transition'> Submit </button>
+        </form>
+    </div>
+    </div>
+  </body>
+</html>
