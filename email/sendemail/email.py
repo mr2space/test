@@ -17,7 +17,7 @@ class SendEmailThread(threading.Thread):
         try:
             html = get_template(temp)
             html_content = html.render()
-            subject = f"Prince"
+            subject = f"Python (Selenium) Assignment - Prince Goswami"
             from_email = "princegoswami.space@gmail.com"
             to = self.email
             print("prepraied")
